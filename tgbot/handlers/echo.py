@@ -11,6 +11,7 @@ async def bot_echo(message: types.Message):
     ]
 
     await message.answer('\n'.join(text))
+    await message.answer(f"[ID]: {message.from_user.id}\n")
 
 
 async def bot_echo_all(message: types.Message, state: FSMContext):
